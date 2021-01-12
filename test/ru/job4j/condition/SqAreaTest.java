@@ -17,6 +17,7 @@ public class SqAreaTest {
 	}
 
 	@Test
+
 	public void whenP10K5ThenS3() {
 		int inP = 10;
 		int inK = 5;
