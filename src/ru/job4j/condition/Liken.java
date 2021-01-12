@@ -7,8 +7,10 @@ public class Liken {
 
 		boolean result = first > second;
 		System.out.println(result);
+
 		result = first < second;
 		System.out.println(result);
+
 		result = first == second;
 		System.out.println(result);
 	}
