@@ -24,4 +24,12 @@ public class SwitchArray2Test {
 		int[] rsl = SwitchArray2.swap(input, 0, input.length - 1);
 		assertThat(rsl, is(expect));
 	}
+
+	@Test
+	public void swapBorderReplaceFirstLast() {
+		int[] input = {0, 1, 2, 3, 4, 5, 6};
+		int[] expect = {6, 1, 2, 3, 4, 5, 0};
+		int[] rsl = SwitchArray2.swapBorder(input);
+		assertThat(rsl, is(expect));
+	}
 }
