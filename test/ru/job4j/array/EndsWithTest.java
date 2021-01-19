@@ -34,7 +34,7 @@ public class EndsWithTest {
 	@Test
 	public void whenNotEndWithPrefixThenTrue1() {
 		char[] word = {'D', 'o', 'g', 'o', 'v', 'o', 'r', 'l', 'i', 'z', 'i', 'n', 'g', 'a'};
-		char[] post = {'l', 'i', 'z', 'i', 'n', 'g', 'a'};
+		char[] post = {'i', 'z', 'i', 'n', 'g', 'a'};
 		boolean result = EndsWith.endsWith(word, post);
 		assertThat(result, is(true));
 	}
