@@ -45,4 +45,13 @@ public class PointTest {
 		double expected = 1;
 		Assert.assertEquals(expected, out, 0.01);
 	}
+
+	@Test
+	public void when000to122Then3() {
+		Point x = new Point(0, 0, 0);
+		Point y = new Point(1, 2, 2);
+		double out = y.distance3D(x);
+		double expected = 3;
+		Assert.assertEquals(expected, out, 0.01);
+	}
 }

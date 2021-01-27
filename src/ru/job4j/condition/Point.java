@@ -6,21 +6,33 @@ import static java.lang.Math.sqrt;
 public class Point {
 	private int x;
 	private int y;
+	private int z;
 
 	public Point(int first, int second) {
 		this.x = first;
 		this.y = second;
 	}
 
+	public Point(int firstPoint, int secondPoint, int thirdPoint) {
+		this.x = firstPoint;
+		this.y = secondPoint;
+		this.z = thirdPoint;
+	}
+
 	public  double distance(Point that) {
-		return sqrt(pow((this.x - that.x), 2) + pow((this.y - that.y), 2));
+		return sqrt(powTmp(this.x, that.x) + powTmp(this.y, that.y));
+	}
+	/*
+	Added an additional method that
+	calculates the square of the sum
+	 */
+
+	public double powTmp(double t1, double t2) {
+		return pow((t2 - t1), 2);
 	}
 
-	public static void main(String[] args) {
-		Point a = new Point(0, 0);
-		Point b = new Point(0, 2);
-		double dist = a.distance(b);
-		System.out.println(dist);
+	public double distance3D(Point that) {
+		double tmp = powTmp(this.x, that.x) + powTmp(this.y, that.y) + powTmp(this.z, that.z);
+		return Math.sqrt(tmp);
 	}
-
 }
