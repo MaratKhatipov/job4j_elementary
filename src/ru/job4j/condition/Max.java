@@ -3,12 +3,21 @@ package ru.job4j.condition;
 public class Max {
 	public static int max(int left, int right) {
 		boolean condition = left > right;
-
 		return condition ? left : right;
 	}
 
+	public static int max(int left, int right, int third) {
+		boolean condition = max(left, right) > third;
+		return condition ? max(left, right) : third;
+	}
+
+	public static int max(int left, int right, int third, int fourth) {
+		boolean condition = max(left, right, third) > fourth;
+		return condition ? max(left, right, third) : fourth;
+	}
+
 	public static void main(String[] args) {
-		int maxNum = Max.max(15, 10);
+		int maxNum = Max.max(1, 2, 3, 0);
 		System.out.println(maxNum);
 	}
 }

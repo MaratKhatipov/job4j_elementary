@@ -24,4 +24,22 @@ public class MaxTest {
 	int result = Max.max(15, 15);
 	Assert.assertThat(result, is(15));
 	}
+
+	@Test
+	public void whenMax1To2To3Then3() {
+		int result = Max.max(10, 20, 60);
+		Assert.assertThat(result, is(60));
+	}
+
+	@Test
+	public void whenMax1To2To3To4Then1() {
+		int result = Max.max(15, 10, 1, 9);
+		Assert.assertThat(result, is(15));
+	}
+
+	@Test
+	public void whenEquals() {
+		int result = Max.max(15, 15, 15, 15);
+		Assert.assertThat(result, is(15));
+	}
 }
